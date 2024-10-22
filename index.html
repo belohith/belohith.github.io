@@ -10,52 +10,77 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color, #1E1E1E);
-            color: var(--text-color, #F1F1F1);
+            background-color: #1E1E1E; /* Dark mode */
+            color: #F1F1F1;
             line-height: 1.6;
-            transition: all 0.3s ease;
         }
+
+        body.light-mode {
+            background-color: #F1F1F1; /* Light mode */
+            color: #1E1E1E;
+        }
+
         a {
             color: #FF4A57;
             text-decoration: none;
         }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
+
         header {
             text-align: center;
             padding: 50px 0;
         }
+
         header h1 {
             font-size: 3em;
             color: #FF4A57;
         }
+
         header p {
             font-size: 1.3em;
             color: #C5C6C7;
         }
+
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #FF4A57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
         section {
             margin-bottom: 50px;
         }
+
         h2 {
             font-size: 2em;
             color: #FF4A57;
             margin-bottom: 20px;
         }
+
         .project {
             background-color: #2E2E2E;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            transition: background-color 0.3s ease;
         }
+
         .skills-list, .certifications {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
+
         .skill-item, .certification-item {
             background-color: #2E2E2E;
             padding: 15px;
@@ -64,19 +89,7 @@
             text-align: center;
             min-width: 200px;
         }
-        .toggle-switch {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .toggle-button {
-            padding: 10px 20px;
-            background-color: #FF4A57;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -86,61 +99,50 @@
 </head>
 <body>
     <div class="container">
-        <!-- Dark/Light Mode Toggle -->
-        <div class="toggle-switch">
-            <button class="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
-        </div>
+        <button class="toggle-button" onclick="toggleMode()">Toggle Light/Dark Mode</button>
 
         <!-- Header Section -->
         <header>
             <h1>Lohith Bollineni</h1>
             <p>Data Analyst | Business Analyst | Product Manager | Finance Analyst</p>
+            <p>Recent graduate with practical experience in sales, academic support, and team leadership. Skilled in project management, IT infrastructure, design, and data management. Proven ability to collaborate with diverse teams, mentor peers, and drive process improvements. Ready to leverage technical expertise and strategic planning to contribute to organizational success.</p>
             <p>Contact: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
         </header>
-
-        <!-- Summary Section -->
-        <section>
-            <p>Recent graduate with practical experience in sales, academic support, and team leadership. Skilled in project management, IT infrastructure, design, and data management. Proven ability to collaborate with diverse teams, mentor peers, and drive process improvements. Ready to leverage technical expertise and strategic planning to contribute to organizational success.</p>
-        </section>
 
         <!-- Projects Section -->
         <section>
             <h2>Projects</h2>
-
             <div class="project">
-                <h3>Bike Shop Sales Analysis</h3>
+                <h3><a href="#" id="bike-shop-link">Bike Shop Sales Analysis</a></h3>
                 <ul>
                     <li>Analyzed 3M+ transactions to identify trends in customer demographics and product performance.</li>
                     <li>Utilized Power BI and SQL to track price changes that led to a 64% increase in revenue.</li>
                 </ul>
-                <img src="placeholder.jpg" alt="Bike Shop Project Image" width="100%">
+                <img src="#" alt="Bike Shop Analysis" style="width: 100%; border-radius: 8px; margin-top: 10px;"> <!-- Add your image link here -->
             </div>
-
             <div class="project">
-                <h3><a href="#">Shark Tank India Data Analysis (React)</a></h3>
-                <ul>
-                    <li>Built an interactive React website showcasing investment trends from 300+ Shark Tank India deals.</li>
-                    <li>Displayed statistics and patterns using user-friendly visualizations.</li>
-                </ul>
-                <img src="placeholder.jpg" alt="Shark Tank React Project Image" width="100%">
-            </div>
-
-            <div class="project">
-                <h3><a href="#">Shark Tank India Investment Analysis (Python)</a></h3>
-                <ul>
-                    <li>Performed in-depth investment analysis of 300+ Shark Tank India deals using Python and Excel.</li>
-                    <li>Detailed insights revealed funding patterns and company valuations.</li>
-                </ul>
-                <img src="placeholder.jpg" alt="Shark Tank Python Project Image" width="100%">
-            </div>
-
-            <div class="project">
-                <h3>Data Related Jobs Survey Analysis</h3>
+                <h3><a href="#" id="data-jobs-link">Data Related Jobs Survey Analysis</a></h3>
                 <ul>
                     <li>Surveyed 600+ participants, identifying key skill demands and salary expectations.</li>
                     <li>57% of respondents reported a good work-life balance in data roles.</li>
                 </ul>
-                <img src="placeholder.jpg" alt="Data Jobs Survey Project Image" width="100%">
+                <img src="#" alt="Data Jobs Survey Analysis" style="width: 100%; border-radius: 8px; margin-top: 10px;"> <!-- Add your image link here -->
+            </div>
+            <div class="project">
+                <h3><a href="#" id="shark-tank-link-1">Shark Tank India Data Analysis</a></h3>
+                <ul>
+                    <li>Analyzed 300+ investment deals from Shark Tank India using Python and Excel.</li>
+                    <li>Found that 65% of pitches received investments.</li>
+                </ul>
+                <img src="#" alt="Shark Tank Analysis 1" style="width: 100%; border-radius: 8px; margin-top: 10px;"> <!-- Add your image link here -->
+            </div>
+            <div class="project">
+                <h3><a href="#" id="shark-tank-link-2">Shark Tank India Detailed Analysis</a></h3>
+                <ul>
+                    <li>Conducted a more detailed analysis of investment patterns and trends.</li>
+                    <li>Utilized Python to present interactive results from the data.</li>
+                </ul>
+                <img src="#" alt="Shark Tank Analysis 2" style="width: 100%; border-radius: 8px; margin-top: 10px;"> <!-- Add your image link here -->
             </div>
         </section>
 
@@ -151,11 +153,24 @@
                 <div class="skill-item">Python</div>
                 <div class="skill-item">SQL</div>
                 <div class="skill-item">Google Analytics</div>
-                <div class="skill-item">Power BI</div>
-                <div class="skill-item">Excel</div>
-                <div class="skill-item">Tableau</div>
                 <div class="skill-item">Adobe Suite</div>
                 <div class="skill-item">Microsoft Office</div>
+                <div class="skill-item">Data Analysis</div>
+                <div class="skill-item">Power BI</div>
+                <div class="skill-item">Tableau</div>
+                <div class="skill-item">Jira</div>
+                <div class="skill-item">Agile</div>
+                <div class="skill-item">Scrum</div>
+                <div class="skill-item">Waterfall</div>
+                <div class="skill-item">Market Research</div>
+                <div class="skill-item">Digital Marketing</div>
+                <div class="skill-item">Requirements Gathering</div>
+                <div class="skill-item">Process Mapping</div>
+                <div class="skill-item">Workflow Analysis</div>
+                <div class="skill-item">Troubleshooting</div>
+                <div class="skill-item">Helpdesk Management</div>
+                <div class="skill-item">User Training</div>
+                <div class="skill-item">ITIL</div>
             </div>
         </section>
 
@@ -178,9 +193,7 @@
 
     <script>
         function toggleMode() {
-            const currentBg = getComputedStyle(document.body).getPropertyValue('--bg-color');
-            document.body.style.setProperty('--bg-color', currentBg === '#1E1E1E' ? '#F1F1F1' : '#1E1E1E');
-            document.body.style.setProperty('--text-color', currentBg === '#1E1E1E' ? '#1E1E1E' : '#F1F1F1');
+            document.body.classList.toggle('light-mode');
         }
     </script>
 </body>
