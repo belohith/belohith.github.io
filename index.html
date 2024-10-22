@@ -1,195 +1,147 @@
-<!-- HTML content -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lohith Bollineni - Portfolio</title>
+    <title>Lohith Bollineni Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #10a37f; 
-            --secondary-color: #1e1e1e; 
-            --accent-color: #3e3e3e;    
-            --light-bg: #ffffff;        
-            --dark-bg: #0b0d0e;       
-            --text-light: #f1f1f1;      
-            --text-dark: #1c1c1c;      
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
             margin: 0;
             padding: 0;
-            transition: all 0.3s ease;
+            background-color: #1E1E1E;
+            color: #F1F1F1;
+            line-height: 1.6;
         }
-
-        body.light-mode {
-            background-color: var(--light-bg);
-            color: var(--text-dark);
+        a {
+            color: #FF4A57;
+            text-decoration: none;
         }
-
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 20px;
         }
-
-        h1, h2, h3 {
-            color: var(--primary-color);
+        header {
             text-align: center;
+            padding: 50px 0;
         }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
+        header h1 {
+            font-size: 3em;
+            color: #FF4A57;
         }
-
-        .section {
-            background-color: var(--secondary-color);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-bottom: 40px;
-            transition: background-color 0.3s ease;
+        header p {
+            font-size: 1.3em;
+            color: #C5C6C7;
         }
-
-        body.light-mode .section {
-            background-color: var(--light-bg);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        section {
+            margin-bottom: 50px;
         }
-
-        .flex-container {
+        h2 {
+            font-size: 2em;
+            color: #FF4A57;
+            margin-bottom: 20px;
+        }
+        .project {
+            background-color: #2E2E2E;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .skills-list, .certifications {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            gap: 10px;
         }
-
-        .flex-item {
+        .skill-item, .certification-item {
+            background-color: #2E2E2E;
+            padding: 15px;
+            border-radius: 8px;
             flex: 1;
-            min-width: 250px;
-            margin: 10px;
-            padding: 20px;
-            background-color: var(--accent-color);
-            border-radius: 10px;
             text-align: center;
-            transition: background-color 0.3s ease;
+            min-width: 200px;
         }
-
-        body.light-mode .flex-item {
-            background-color: var(--light-bg);
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--primary-color);
-        }
-
-        .toggle-theme {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        body.light-mode .toggle-theme {
-            background-color: var(--accent-color);
-            color: var(--text-dark);
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #161616;
         }
     </style>
 </head>
 <body>
-
-    <button class="toggle-theme" onclick="toggleTheme()">Theme</button>
-
     <div class="container">
-
-        <header style="text-align: center; margin-bottom: 60px;">
+        <!-- Header Section -->
+        <header>
             <h1>Lohith Bollineni</h1>
             <p>Data Analyst | Business Analyst | Product Manager | Finance Analyst</p>
+            <p>Contact: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
         </header>
 
-        <section class="section">
-            <p>
-                I am a data-driven professional with experience in <strong>data analysis</strong>, <strong>business analysis</strong>, 
-                <strong>product management</strong>, and <strong>financial analysis</strong>. Skilled at extracting insights 
-                from data to create solutions that drive business success. Currently in the US and open to relocation.
-            </p>
-        </section>
-
+        <!-- Education Section -->
         <section>
-            <h2>Areas of Expertise</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <h3>Data Analysis</h3>
-                    <p>Data cleaning, statistical analysis, data visualization, reporting.</p>
-                </div>
-                <div class="flex-item">
-                    <h3>Business Analysis</h3>
-                    <p>Requirements gathering, process improvement, stakeholder management.</p>
-                </div>
-                <div class="flex-item">
-                    <h3>Product Management</h3>
-                    <p>Product development, roadmap planning, cross-functional collaboration.</p>
-                </div>
-                <div class="flex-item">
-                    <h3>Finance Analysis</h3>
-                    <p>Financial modeling, budgeting, forecasting.</p>
-                </div>
-            </div>
+            <h2>Education</h2>
+            <p><strong>Webster University, TX</strong> – Masters in Information Technology Management, Oct 2024</p>
+            <p>CGPA: 3.9/4.0</p>
+            <p><strong>SUNY New Paltz, NY</strong> – Masters in Computer Science, May 2023</p>
+            <p><strong>VIT Chennai, India</strong> – Bachelor of Engineering in Electronics & Communications, May 2020</p>
         </section>
 
-        <section>
-            <h2>Tools & Technologies</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <h3>Data Tools</h3>
-                    <p>Excel, SQL, Tableau, Power BI, Python (Pandas, NumPy).</p>
-                </div>
-                <div class="flex-item">
-                    <h3>Business Tools</h3>
-                    <p>Jira, Confluence, Microsoft Project.</p>
-                </div>
-                <div class="flex-item">
-                    <h3>Design Tools</h3>
-                    <p>Figma, Adobe XD, Sketch (Bonus).</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Projects Section -->
         <section>
             <h2>Projects</h2>
-            <ul style="list-style: none; padding: 0; text-align: center;">
-                <li style="margin: 15px 0;"><a href="#">Bike Shop Sales Data Analysis</a></li>
-                <li style="margin: 15px 0;"><a href="#">Data-Related Jobs Survey Data Analysis</a></li>
-                <li style="margin: 15px 0;"><a href="#">Shark Tank India Data Analysis</a></li>
-            </ul>
+            <div class="project">
+                <h3>Bike Shop Sales Analysis</h3>
+                <ul>
+                    <li>Analyzed 3M+ transactions to identify trends in customer demographics and product performance.</li>
+                    <li>Utilized Power BI and SQL to track price changes that led to a 64% increase in revenue.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Data Related Jobs Survey Analysis</h3>
+                <ul>
+                    <li>Surveyed 600+ participants, identifying key skill demands and salary expectations.</li>
+                    <li>57% of respondents reported a good work-life balance in data roles.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Shark Tank India Data Analysis</h3>
+                <ul>
+                    <li>Analyzed 300+ investment deals from Shark Tank India using Python and Excel.</li>
+                    <li>Found that 65% of pitches received investments.</li>
+                </ul>
+            </div>
         </section>
 
+        <!-- Skills Section -->
         <section>
-            <h2>Contact</h2>
-            <p style="text-align: center; font-size: 1.3em;">Get in touch at: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
+            <h2>Skills & Tools</h2>
+            <div class="skills-list">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Power BI</div>
+                <div class="skill-item">Excel</div>
+                <div class="skill-item">Google Analytics</div>
+                <div class="skill-item">Tableau</div>
+            </div>
         </section>
 
-    </div>
+        <!-- Certifications Section -->
+        <section>
+            <h2>Certifications</h2>
+            <div class="certifications">
+                <div class="certification-item">Google UX Certificate</div>
+                <div class="certification-item">Microsoft UX Certificate</div>
+                <div class="certification-item">Project Management Foundations Certificate</div>
+                <div class="certification-item">Microsoft Data Analyst Certificate</div>
+            </div>
+        </section>
 
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-        }
-    </script>
+        <!-- Contact Section -->
+        <footer>
+            <p>Get in touch: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
+            <p>Phone: +1-845-633-9088</p>
+        </footer>
+    </div>
 </body>
 </html>
