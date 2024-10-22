@@ -7,13 +7,13 @@
     <title>Lohith Bollineni - Portfolio</title>
     <style>
         :root {
-            --primary-color: #2a9d8f;
-            --secondary-color: #264653;
-            --accent-color: #e76f51;
-            --light-bg: #f4f4f9;
-            --dark-bg: #1d3557;
-            --text-light: #f4f4f9;
-            --text-dark: #000;
+            --primary-color: #10a37f; /* ChatGPT green */
+            --secondary-color: #1e1e1e; /* Dark grey */
+            --accent-color: #3e3e3e;    /* Medium grey */
+            --light-bg: #ffffff;        /* White background */
+            --dark-bg: #0b0d0e;         /* ChatGPT dark theme background */
+            --text-light: #f1f1f1;      /* Light text */
+            --text-dark: #1c1c1c;       /* Dark text */
         }
 
         body {
@@ -71,7 +71,7 @@
             min-width: 250px;
             margin: 10px;
             padding: 20px;
-            background-color: var(--secondary-color);
+            background-color: var(--accent-color);
             border-radius: 10px;
             text-align: center;
             transition: background-color 0.3s ease;
@@ -82,7 +82,7 @@
         }
 
         a {
-            color: var(--accent-color);
+            color: var(--primary-color);
             text-decoration: none;
             font-size: 1.2em;
             transition: color 0.3s ease;
@@ -107,6 +107,7 @@
 
         body.light-mode .toggle-theme {
             background-color: var(--accent-color);
+            color: var(--text-dark);
         }
     </style>
 </head>
