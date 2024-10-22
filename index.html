@@ -10,13 +10,15 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1E1E1E;
-            color: #F1F1F1;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
         a {
             color: #FF4A57;
             text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .container {
             max-width: 1100px;
@@ -28,23 +30,22 @@
             padding: 50px 0;
         }
         header h1 {
-            font-size: 3em;
-            color: #FF4A57;
+            font-size: 2.5em;
         }
         header p {
             font-size: 1.3em;
-            color: #C5C6C7;
+            color: var(--secondary-text-color);
         }
         section {
             margin-bottom: 50px;
         }
         h2 {
             font-size: 2em;
-            color: #FF4A57;
             margin-bottom: 20px;
+            color: #FF4A57;
         }
         .project {
-            background-color: #2E2E2E;
+            background-color: var(--project-bg-color);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -55,7 +56,7 @@
             gap: 10px;
         }
         .skill-item, .certification-item {
-            background-color: #2E2E2E;
+            background-color: var(--project-bg-color);
             padding: 15px;
             border-radius: 8px;
             flex: 1;
@@ -65,11 +66,63 @@
         footer {
             text-align: center;
             padding: 30px;
-            background-color: #161616;
+            background-color: var(--footer-bg-color);
+        }
+
+        /* Toggle Button */
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #FF4A57;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        /* Dark Mode Colors */
+        body.dark-mode {
+            --project-bg-color: #2E2E2E;
+            --footer-bg-color: #161616;
+            --secondary-text-color: #C5C6C7;
+            background-color: #1E1E1E;
+            color: #F1F1F1;
+        }
+
+        /* Light Mode Colors */
+        body.light-mode {
+            --project-bg-color: #f0f0f0;
+            --footer-bg-color: #f7f7f7;
+            --secondary-text-color: #333;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1.1em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .skills-list, .certifications {
+                flex-direction: column;
+            }
+            .skill-item, .certification-item {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
+    <button class="toggle-button" id="toggleMode">Switch to Light Mode</button>
+
     <div class="container">
         <!-- Header Section -->
         <header>
@@ -78,34 +131,25 @@
             <p>Contact: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
         </header>
 
-        <!-- Education Section -->
-        <section>
-            <h2>Education</h2>
-            <p><strong>Webster University, TX</strong> – Masters in Information Technology Management, Oct 2024</p>
-            <p>CGPA: 3.9/4.0</p>
-            <p><strong>SUNY New Paltz, NY</strong> – Masters in Computer Science, May 2023</p>
-            <p><strong>VIT Chennai, India</strong> – Bachelor of Engineering in Electronics & Communications, May 2020</p>
-        </section>
-
         <!-- Projects Section -->
         <section>
             <h2>Projects</h2>
             <div class="project">
-                <h3>Bike Shop Sales Analysis</h3>
+                <h3><a href="#">Bike Shop Sales Analysis</a></h3>
                 <ul>
                     <li>Analyzed 3M+ transactions to identify trends in customer demographics and product performance.</li>
                     <li>Utilized Power BI and SQL to track price changes that led to a 64% increase in revenue.</li>
                 </ul>
             </div>
             <div class="project">
-                <h3>Data Related Jobs Survey Analysis</h3>
+                <h3><a href="#">Data Related Jobs Survey Analysis</a></h3>
                 <ul>
                     <li>Surveyed 600+ participants, identifying key skill demands and salary expectations.</li>
                     <li>57% of respondents reported a good work-life balance in data roles.</li>
                 </ul>
             </div>
             <div class="project">
-                <h3>Shark Tank India Data Analysis</h3>
+                <h3><a href="#">Shark Tank India Data Analysis</a></h3>
                 <ul>
                     <li>Analyzed 300+ investment deals from Shark Tank India using Python and Excel.</li>
                     <li>Found that 65% of pitches received investments.</li>
@@ -130,18 +174,42 @@
         <section>
             <h2>Certifications</h2>
             <div class="certifications">
-                <div class="certification-item">Google UX Certificate</div>
-                <div class="certification-item">Microsoft UX Certificate</div>
-                <div class="certification-item">Project Management Foundations Certificate</div>
-                <div class="certification-item">Microsoft Data Analyst Certificate</div>
+                <div class="certification-item"><a href="#">Google UX Certificate</a></div>
+                <div class="certification-item"><a href="#">Microsoft UX Certificate</a></div>
+                <div class="certification-item"><a href="#">Project Management Foundations Certificate</a></div>
+                <div class="certification-item"><a href="#">Microsoft Data Analyst Certificate</a></div>
             </div>
+        </section>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <p><strong>Webster University, TX</strong> – Masters in Information Technology Management, Oct 2024</p>
+            <p>CGPA: 3.9/4.0</p>
+            <p><strong>SUNY New Paltz, NY</strong> – Masters in Computer Science, May 2023</p>
+            <p><strong>VIT Chennai, India</strong> – Bachelor of Engineering in Electronics & Communications, May 2020</p>
+            <p>CGPA: 7.19/10.0</p>
         </section>
 
         <!-- Contact Section -->
         <footer>
             <p>Get in touch: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
-            <p>Phone: +1-845-633-9088</p>
         </footer>
     </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleMode');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.replace('dark-mode', 'light-mode');
+                toggleButton.textContent = 'Switch to Dark Mode';
+            } else {
+                body.classList.replace('light-mode', 'dark-mode');
+                toggleButton.textContent = 'Switch to Light Mode';
+            }
+        });
+    </script>
 </body>
 </html>
