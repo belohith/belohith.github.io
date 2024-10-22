@@ -10,15 +10,14 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: var(--bg-color, #1E1E1E);
+            color: var(--text-color, #F1F1F1);
             line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
+            transition: all 0.3s ease;
         }
         a {
             color: #FF4A57;
             text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
         .container {
             max-width: 1100px;
@@ -30,25 +29,27 @@
             padding: 50px 0;
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
+            color: #FF4A57;
         }
         header p {
             font-size: 1.3em;
-            color: var(--secondary-text-color);
+            color: #C5C6C7;
         }
         section {
             margin-bottom: 50px;
         }
         h2 {
             font-size: 2em;
-            margin-bottom: 20px;
             color: #FF4A57;
+            margin-bottom: 20px;
         }
         .project {
-            background-color: var(--project-bg-color);
+            background-color: #2E2E2E;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
+            transition: background-color 0.3s ease;
         }
         .skills-list, .certifications {
             display: flex;
@@ -56,74 +57,40 @@
             gap: 10px;
         }
         .skill-item, .certification-item {
-            background-color: var(--project-bg-color);
+            background-color: #2E2E2E;
             padding: 15px;
             border-radius: 8px;
             flex: 1;
             text-align: center;
             min-width: 200px;
         }
+        .toggle-switch {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .toggle-button {
+            padding: 10px 20px;
+            background-color: #FF4A57;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
         footer {
             text-align: center;
             padding: 30px;
-            background-color: var(--footer-bg-color);
-        }
-
-        /* Toggle Button */
-        .toggle-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #FF4A57;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 20px;
-        }
-
-        /* Dark Mode Colors */
-        body.dark-mode {
-            --project-bg-color: #2E2E2E;
-            --footer-bg-color: #161616;
-            --secondary-text-color: #C5C6C7;
-            background-color: #1E1E1E;
-            color: #F1F1F1;
-        }
-
-        /* Light Mode Colors */
-        body.light-mode {
-            --project-bg-color: #f0f0f0;
-            --footer-bg-color: #f7f7f7;
-            --secondary-text-color: #333;
-            background-color: #fff;
-            color: #333;
-        }
-
-        /* Media Query for mobile responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1.1em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .skills-list, .certifications {
-                flex-direction: column;
-            }
-            .skill-item, .certification-item {
-                min-width: 100%;
-            }
+            background-color: #161616;
         }
     </style>
 </head>
-<body class="dark-mode">
-    <button class="toggle-button" id="toggleMode">Switch to Light Mode</button>
-
+<body>
     <div class="container">
+        <!-- Dark/Light Mode Toggle -->
+        <div class="toggle-switch">
+            <button class="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+        </div>
+
         <!-- Header Section -->
         <header>
             <h1>Lohith Bollineni</h1>
@@ -131,29 +98,49 @@
             <p>Contact: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
         </header>
 
+        <!-- Summary Section -->
+        <section>
+            <p>Recent graduate with practical experience in sales, academic support, and team leadership. Skilled in project management, IT infrastructure, design, and data management. Proven ability to collaborate with diverse teams, mentor peers, and drive process improvements. Ready to leverage technical expertise and strategic planning to contribute to organizational success.</p>
+        </section>
+
         <!-- Projects Section -->
         <section>
             <h2>Projects</h2>
+
             <div class="project">
-                <h3><a href="#">Bike Shop Sales Analysis</a></h3>
+                <h3>Bike Shop Sales Analysis</h3>
                 <ul>
                     <li>Analyzed 3M+ transactions to identify trends in customer demographics and product performance.</li>
                     <li>Utilized Power BI and SQL to track price changes that led to a 64% increase in revenue.</li>
                 </ul>
+                <img src="placeholder.jpg" alt="Bike Shop Project Image" width="100%">
             </div>
+
             <div class="project">
-                <h3><a href="#">Data Related Jobs Survey Analysis</a></h3>
+                <h3><a href="#">Shark Tank India Data Analysis (React)</a></h3>
+                <ul>
+                    <li>Built an interactive React website showcasing investment trends from 300+ Shark Tank India deals.</li>
+                    <li>Displayed statistics and patterns using user-friendly visualizations.</li>
+                </ul>
+                <img src="placeholder.jpg" alt="Shark Tank React Project Image" width="100%">
+            </div>
+
+            <div class="project">
+                <h3><a href="#">Shark Tank India Investment Analysis (Python)</a></h3>
+                <ul>
+                    <li>Performed in-depth investment analysis of 300+ Shark Tank India deals using Python and Excel.</li>
+                    <li>Detailed insights revealed funding patterns and company valuations.</li>
+                </ul>
+                <img src="placeholder.jpg" alt="Shark Tank Python Project Image" width="100%">
+            </div>
+
+            <div class="project">
+                <h3>Data Related Jobs Survey Analysis</h3>
                 <ul>
                     <li>Surveyed 600+ participants, identifying key skill demands and salary expectations.</li>
                     <li>57% of respondents reported a good work-life balance in data roles.</li>
                 </ul>
-            </div>
-            <div class="project">
-                <h3><a href="#">Shark Tank India Data Analysis</a></h3>
-                <ul>
-                    <li>Analyzed 300+ investment deals from Shark Tank India using Python and Excel.</li>
-                    <li>Found that 65% of pitches received investments.</li>
-                </ul>
+                <img src="placeholder.jpg" alt="Data Jobs Survey Project Image" width="100%">
             </div>
         </section>
 
@@ -163,10 +150,12 @@
             <div class="skills-list">
                 <div class="skill-item">Python</div>
                 <div class="skill-item">SQL</div>
+                <div class="skill-item">Google Analytics</div>
                 <div class="skill-item">Power BI</div>
                 <div class="skill-item">Excel</div>
-                <div class="skill-item">Google Analytics</div>
                 <div class="skill-item">Tableau</div>
+                <div class="skill-item">Adobe Suite</div>
+                <div class="skill-item">Microsoft Office</div>
             </div>
         </section>
 
@@ -181,16 +170,6 @@
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section>
-            <h2>Education</h2>
-            <p><strong>Webster University, TX</strong> – Masters in Information Technology Management, Oct 2024</p>
-            <p>CGPA: 3.9/4.0</p>
-            <p><strong>SUNY New Paltz, NY</strong> – Masters in Computer Science, May 2023</p>
-            <p><strong>VIT Chennai, India</strong> – Bachelor of Engineering in Electronics & Communications, May 2020</p>
-            <p>CGPA: 7.19/10.0</p>
-        </section>
-
         <!-- Contact Section -->
         <footer>
             <p>Get in touch: <a href="mailto:lohithbollineni9@gmail.com">lohithbollineni9@gmail.com</a></p>
@@ -198,18 +177,11 @@
     </div>
 
     <script>
-        const toggleButton = document.getElementById('toggleMode');
-        const body = document.body;
-
-        toggleButton.addEventListener('click', () => {
-            if (body.classList.contains('dark-mode')) {
-                body.classList.replace('dark-mode', 'light-mode');
-                toggleButton.textContent = 'Switch to Dark Mode';
-            } else {
-                body.classList.replace('light-mode', 'dark-mode');
-                toggleButton.textContent = 'Switch to Light Mode';
-            }
-        });
+        function toggleMode() {
+            const currentBg = getComputedStyle(document.body).getPropertyValue('--bg-color');
+            document.body.style.setProperty('--bg-color', currentBg === '#1E1E1E' ? '#F1F1F1' : '#1E1E1E');
+            document.body.style.setProperty('--text-color', currentBg === '#1E1E1E' ? '#1E1E1E' : '#F1F1F1');
+        }
     </script>
 </body>
 </html>
